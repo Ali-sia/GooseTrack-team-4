@@ -1,7 +1,10 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { InitialElement } from './InitialElement';
-import MainLayout from './MainLayout';
+import MainLayout from './MainLayout/MainLayout';
 import AccountPage from '../pages/AccountPage/AccountPage';
+import CalendarPage from 'pages/CalendarPage/CalendarPage';
+import RegisterPage from '../pages/RegisterPage/RegisterPage';
+import LoginPage from '../pages/LoginPage/LoginPage';
 
 export const App = () => {
   return (
