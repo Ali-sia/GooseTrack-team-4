@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/goose-track-team-4/static/css/main.d34ff64c.css",
+    "main.css": "/goose-track-team-4/static/css/main.d1349ad1.css",
     "main.js": "/goose-track-team-4/static/js/main.b7b0f0c5.js",
     "static/media/ph_user.svg": "/goose-track-team-4/static/media/ph_user.24aa63a90eb019bd4fe5b5f4ba8aaf48.svg",
     "index.html": "/goose-track-team-4/index.html",
-    "main.d34ff64c.css.map": "/goose-track-team-4/static/css/main.d34ff64c.css.map",
+    "main.d1349ad1.css.map": "/goose-track-team-4/static/css/main.d1349ad1.css.map",
     "main.b7b0f0c5.js.map": "/goose-track-team-4/static/js/main.b7b0f0c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d34ff64c.css",
+    "static/css/main.d1349ad1.css",
     "static/js/main.b7b0f0c5.js"
   ]
 }
