@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/goose-track-team-4/static/css/main.d1349ad1.css",
+    "main.css": "/goose-track-team-4/static/css/main.ac0f4c45.css",
     "main.js": "/goose-track-team-4/static/js/main.dfa7d690.js",
+    "static/media/Inter-Bold.ttf": "/goose-track-team-4/static/media/Inter-Bold.9aab1ebe6bd16660e37e.ttf",
+    "static/media/Inter-SemiBold.ttf": "/goose-track-team-4/static/media/Inter-SemiBold.1616d5720720a412cfc8.ttf",
+    "static/media/Inter-Medium.ttf": "/goose-track-team-4/static/media/Inter-Medium.9d1fd4235eeb376c5f96.ttf",
+    "static/media/Inter-Regular.ttf": "/goose-track-team-4/static/media/Inter-Regular.b559a93b35af397f4b6f.ttf",
+    "static/media/coolvetica_rg_it.otf": "/goose-track-team-4/static/media/coolvetica_rg_it.733776c8d6437461f923.otf",
+    "static/media/coolvetica_rg.otf": "/goose-track-team-4/static/media/coolvetica_rg.3d81d0e1fdbd5f69b232.otf",
     "static/media/ph_user.svg": "/goose-track-team-4/static/media/ph_user.24aa63a90eb019bd4fe5b5f4ba8aaf48.svg",
     "index.html": "/goose-track-team-4/index.html",
-    "main.d1349ad1.css.map": "/goose-track-team-4/static/css/main.d1349ad1.css.map",
+    "main.ac0f4c45.css.map": "/goose-track-team-4/static/css/main.ac0f4c45.css.map",
     "main.dfa7d690.js.map": "/goose-track-team-4/static/js/main.dfa7d690.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1349ad1.css",
+    "static/css/main.ac0f4c45.css",
     "static/js/main.dfa7d690.js"
   ]
 }
