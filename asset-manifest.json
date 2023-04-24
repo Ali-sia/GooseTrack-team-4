@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/goose-track-team-4/static/css/main.4160ad35.css",
-    "main.js": "/goose-track-team-4/static/js/main.e50213bb.js",
+    "main.js": "/goose-track-team-4/static/js/main.1cc5d94b.js",
+    "static/media/signUpGoose.svg": "/goose-track-team-4/static/media/signUpGoose.764179788a9653e62ccd2be8b954da70.svg",
     "static/media/Inter-Bold.ttf": "/goose-track-team-4/static/media/Inter-Bold.9aab1ebe6bd16660e37e.ttf",
     "static/media/Inter-SemiBold.ttf": "/goose-track-team-4/static/media/Inter-SemiBold.1616d5720720a412cfc8.ttf",
     "static/media/Inter-Medium.ttf": "/goose-track-team-4/static/media/Inter-Medium.9d1fd4235eeb376c5f96.ttf",
@@ -9,15 +10,16 @@
     "static/media/coolvetica_rg_it.otf": "/goose-track-team-4/static/media/coolvetica_rg_it.733776c8d6437461f923.otf",
     "static/media/coolvetica_rg.otf": "/goose-track-team-4/static/media/coolvetica_rg.3d81d0e1fdbd5f69b232.otf",
     "static/media/ph_user.svg": "/goose-track-team-4/static/media/ph_user.24aa63a90eb019bd4fe5b5f4ba8aaf48.svg",
+    "static/media/signUpSpeak.svg": "/goose-track-team-4/static/media/signUpSpeak.6f935bf975f7c3c711d29a7910b0b5fe.svg",
     "index.html": "/goose-track-team-4/index.html",
     "static/media/sun.svg": "/goose-track-team-4/static/media/sun.b39b933470e05d14231c146751174de4.svg",
     "static/media/moon.svg": "/goose-track-team-4/static/media/moon.e200d8cf7ca44b563b844c25a03b198d.svg",
     "static/media/burger.svg": "/goose-track-team-4/static/media/burger.3a432ea5c5360e99720e65aab7253b07.svg",
     "main.4160ad35.css.map": "/goose-track-team-4/static/css/main.4160ad35.css.map",
-    "main.e50213bb.js.map": "/goose-track-team-4/static/js/main.e50213bb.js.map"
+    "main.1cc5d94b.js.map": "/goose-track-team-4/static/js/main.1cc5d94b.js.map"
   },
   "entrypoints": [
     "static/css/main.4160ad35.css",
-    "static/js/main.e50213bb.js"
+    "static/js/main.1cc5d94b.js"
   ]
 }
