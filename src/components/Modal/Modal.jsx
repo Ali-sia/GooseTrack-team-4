@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useSelector } from 'react';
 import { createPortal } from 'react-dom';
+import { selectTheme } from 'redux/auth/auth.selectors';
 
 import { ModalWrapper, ModalContainer, CloseButton } from './Modal.styled';
 
 const Modal = ({ children, onClose }) => {
   const modalRoot = document.getElementById('modal-root');
+
+  const currentTheme = useSelector(selectTheme);
 
   useEffect(() => {
     const handleEscape = event => {
@@ -28,8 +31,8 @@ const Modal = ({ children, onClose }) => {
 
   const modalContent = (
     <ModalWrapper onClick={handleClickOutside}>
-      <ModalContainer>
-        <CloseButton onClick={onClose}>
+      <ModalContainer theme={currentTheme}>
+        <CloseButton onClick={onClose} theme={currentTheme}>
           <svg
             width="20"
             height="20"
