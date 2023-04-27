@@ -5,6 +5,8 @@ import { selectTheme } from 'redux/auth/auth.selectors';
 
 import { ModalWrapper, ModalContainer, CloseButton } from './Modal.styled';
 
+// 1
+
 const Modal = ({ children, onClose }) => {
   const modalRoot = document.getElementById('modal-root');
 
