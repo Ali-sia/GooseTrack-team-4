@@ -10,7 +10,6 @@ import AccountPage from '../pages/AccountPage/AccountPage';
 import CalendarPage from 'pages/CalendarPage/CalendarPage';
 import RegisterPage from '../pages/RegisterPage/RegisterPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
-import HomePage from '../pages/HomePage/HomePage';
 
 export const App = () => {
   const [currentTheme, setCurrentTheme] = useState(localStorage.getItem("theme")
@@ -25,12 +24,6 @@ export const App = () => {
     <BrowserRouter basename="goose-track-team-4">
       {/* <Suspense fallback={null}> */}
           <Routes>
-            <Route 
-              path="/home page"
-              element={
-                <HomePage />
-              }
-            />
         <Route path="/" element={<InitialElement />}>
           {/* routes for authorization */}
           <Route
