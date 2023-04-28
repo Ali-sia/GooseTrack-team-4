@@ -35,11 +35,9 @@ const Header = () => {
         <BurgerSVGStyled />
       </ButtonStyled>
       <SiteNameContainer>
-        {isVisibleGoose && (
-          <GooseContainer>
-            <ForTheGloryOfMentors />
-          </GooseContainer>
-        )}
+        <GooseContainer>
+          {isVisibleGoose && (<ForTheGloryOfMentors />)}
+        </GooseContainer>
         <PageContainer>
           <PageName>
             {pathname === '/account' ? 'User Profile' : 'Calendar'}

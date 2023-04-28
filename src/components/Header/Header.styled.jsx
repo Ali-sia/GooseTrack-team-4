@@ -152,6 +152,7 @@ export const PageContainer = styled.div`
 export const TakeToWork = styled.div`
   font-size: ${props => props.theme.fontSizes.s};
   line-height: 1.29;
+  min-height: 20px;
 
   & span {
     color: ${props => props.theme.colors.btnLogout};
