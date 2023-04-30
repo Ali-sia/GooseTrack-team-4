@@ -1,11 +1,19 @@
+import React, { useEffect, useMemo } from "react";
+import shortid from 'shortid';
+import AddTaskIcon from 'components/Buttons/AddTaskBtn/AddTaskIcon.svg';
+import { useDispatch, useSelector } from "react-redux";
+import { fetchColumns, addColumn, deleteColumn } from "redux/columns/columns.operations";
+import { selectCategories, selectNumbers, selectIsLoading, selectError } from "redux/columns/columns.selectors";
+
 import DayCalendarHead from './DayCalendarHead/DayCalendarHead';
+import TasksColumn from './TasksColumn/TasksColumn';
 
 import {
+  AddColumnButton,
   ChoosedDayWrapper,
   TasksColumnsList,
   TasksColumnsListWrapper,
 } from './ChooseDay.styled';
-import TasksColumn from './TasksColumn/TasksColumn';
 
 export default function ChoosedDay({
   currentDate,
@@ -13,6 +21,26 @@ export default function ChoosedDay({
   toggleModal,
   changeActiveDay,
 }) {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+  const number = useSelector(selectNumbers);
+  const columnsData = useSelector(selectCategories);
+    
+  useEffect(() => {
+        dispatch(fetchColumns());
+  }, [dispatch]);
+  
+  const addNewColumn = ({ title, number }) => {
+        const currentColumn = { id: shortid.generate(), title: title, number: number }
+        
+        dispatch(addColumn(currentColumn));
+  };
+  
+  const deleteCurrentColumn = id => {
+        dispatch(deleteColumn(id));
+    };
+
   const columnData = [
     { id: 'column1', title: 'To do', number: 1 },
     { id: 'column2', title: 'In progress', number: 2 },
@@ -30,12 +58,21 @@ export default function ChoosedDay({
         />
         <TasksColumnsListWrapper>
           <TasksColumnsList>
-            {columnData.map(column => (
-              <TasksColumn key={column.id} title={column.title} />
+            {columnsData.map(column => (
+              <TasksColumn
+                key={column.id}
+                title={column.title}
+                toggleModal={toggleModal}
+                onDeleteColumn={deleteCurrentColumn}
+                onAddColumn={addNewColumn}
+              />
             ))}
-            {/* <TasksColumn toggleModal={toggleModal} />
-            <TasksColumn toggleModal={toggleModal} />
-            <TasksColumn toggleModal={toggleModal} /> */}
+            <AddColumnButton
+              // onClick={openModal}
+            >
+              <img src={AddTaskIcon} alt="+"></img>
+              <span> Add category </span>
+            </AddColumnButton>
           </TasksColumnsList>
         </TasksColumnsListWrapper>
       </ChoosedDayWrapper>

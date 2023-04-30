@@ -11,7 +11,6 @@ export default function ColumnHeadBar({ toggleModal, title }) {
       <ColumnHeadBarTitle>{title}</ColumnHeadBarTitle>
       <StyledRoundButton type="button" onClick={() => toggleModal()}>
         <RoundBtnIconSvg />
-        {/* <img src={RoundBtnIconSvg} alt="+"></img> */}
       </StyledRoundButton>
     </ColumnHeadBarWrapper>
   );

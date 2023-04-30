@@ -11,11 +11,14 @@ import {
 import { useLocation } from 'react-router-dom';
 import { useAuth } from 'hooks';
 import { fetchTasks } from 'redux/tasks/tasks.operations';
+// import { fetchColumns, addColumn, deleteColumn } from 'redux/columns/columns.operations'; 
 import { useDispatch } from 'react-redux';
 import ChoosedMonth from 'components/ChoosedMonth/ChoosedMonth';
 import ChoosedDay from 'components/ChooseDay/ChooseDay';
 import { useTasks } from 'hooks/useTasks';
+// import { useColumns } from 'hooks/useColumns';
 import { toast } from 'react-hot-toast';
+// import shortid from 'shortid';
 
 export default function CalendarPage() {
   setDefaultOptions({ weekStartsOn: 1 }); //for date-fns, to start count weeks from monday
@@ -25,6 +28,7 @@ export default function CalendarPage() {
   const [activeDate, setActiveDate] = useState(currentDate);
   const { isLoggedIn } = useAuth();
   const { savedPeriod } = useTasks();
+  // const { columns } = useColumns();
 
   const isDayPage = location.pathname.includes('day');
 
@@ -98,6 +102,7 @@ export default function CalendarPage() {
           currentDate={currentDate}
           activeDate={activeDate}
           changeActiveDay={changeActiveDay}
+          // columns={}
         />
       ) : (
         <ChoosedMonth
