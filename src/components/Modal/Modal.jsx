@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { createPortal } from 'react-dom';
 import { selectTheme } from 'redux/auth/auth.selectors';
@@ -10,12 +10,16 @@ const Modal = ({ children, onClose }) => {
 
   const currentTheme = useSelector(selectTheme);
 
+  const [ isOpen, setIsOpen ] = useState(false)
+
   useEffect(() => {
     const handleEscape = event => {
       if (event.key === 'Escape') {
         onClose();
       }
     };
+
+    setIsOpen(true);
 
     window.addEventListener('keydown', handleEscape);
 
@@ -33,7 +37,7 @@ const Modal = ({ children, onClose }) => {
 
   const modalContent = (
     <ModalWrapper onClick={e => handleClickOutside(e)}>
-      <ModalContainer theme={currentTheme}>
+      <ModalContainer className={isOpen && "isOpen"} theme={currentTheme}>
         <CloseButton onClick={onClose} theme={currentTheme}>
           <svg
             width="20"

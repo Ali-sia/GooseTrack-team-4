@@ -25,6 +25,13 @@ const ModalContainer = styled.div`
   box-shadow: 0px 4px 16px rgba(17, 17, 17, 0.1);
   border-radius: 8px;
 
+  transition: transform 500ms ease-in-out;
+  transform: scale(0);
+
+  &.isOpen {
+    transform: scale(1);
+  };
+
   @media (min-width: 768px) {
     width: 396px;
     padding: 40px 28px;
