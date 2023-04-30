@@ -3,17 +3,12 @@ import ColumnHeadBar from './ColumnHeadBar/ColumnHeadBar';
 import ColumnTasksList from './ColumnsTasksList/ColumnsTasksList';
 import { TaskColumnsWrapper } from './TasksColumn.styled';
 
-export default function TasksColumn({ toggleModal }) {
-  const columnData = [
-    { title: 'To do', number: 1 },
-    { title: 'In progress', number: 2 },
-    { title: 'Done', number: 3 },
-  ];
+export default function TasksColumn({ toggleModal, title }) {
 
   const tasksCollection = {};
   return (
     <TaskColumnsWrapper>
-      <ColumnHeadBar title={columnData.title} toggleModal={toggleModal} />
+      <ColumnHeadBar title={title} toggleModal={toggleModal} />
       {tasksCollection && <ColumnTasksList />}
 
       <AddTaskBtn openModal={toggleModal} />
