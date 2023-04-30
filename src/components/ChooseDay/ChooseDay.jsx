@@ -13,6 +13,13 @@ export default function ChoosedDay({
   toggleModal,
   changeActiveDay,
 }) {
+  const columnData = [
+    { id: 'column1', title: 'To do', number: 1 },
+    { id: 'column2', title: 'In progress', number: 2 },
+    { id: 'column3', title: 'Done', number: 3 },
+    // { id: 'column4', title: 'Add new category', number: 4 },
+  ];
+
   return (
     <>
       <ChoosedDayWrapper>
@@ -23,9 +30,12 @@ export default function ChoosedDay({
         />
         <TasksColumnsListWrapper>
           <TasksColumnsList>
+            {columnData.map(column => (
+              <TasksColumn key={column.id} title={column.title} />
+            ))}
+            {/* <TasksColumn toggleModal={toggleModal} />
             <TasksColumn toggleModal={toggleModal} />
-            <TasksColumn toggleModal={toggleModal} />
-            <TasksColumn toggleModal={toggleModal} />
+            <TasksColumn toggleModal={toggleModal} /> */}
           </TasksColumnsList>
         </TasksColumnsListWrapper>
       </ChoosedDayWrapper>
