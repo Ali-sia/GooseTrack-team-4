@@ -10,7 +10,7 @@ import {
   DeleteTaskIcon,
 } from './ColumnToolbar.styled';
 
-const ColumnToolbar = ({column, tasksForColumn, tasksForDeleteColumn}) => {
+const ColumnToolbar = ({column, tasksForDeleteColumn}) => {
   const dispatch = useDispatch();
   const currentTheme = useSelector(selectTheme);
   

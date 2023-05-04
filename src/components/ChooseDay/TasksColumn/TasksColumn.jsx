@@ -14,7 +14,6 @@ export default function TasksColumn({
     <TaskColumnsWrapper>
       <ColumnHeadBar
         column={column}
-        tasksForColumn={tasksForColumn}
         tasksForDeleteColumn={tasksForDeleteColumn}
       />
       <ColumnTasksList
