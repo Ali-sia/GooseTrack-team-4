@@ -4,6 +4,7 @@ import ColumnTasksList from './ColumnsTasksList/ColumnsTasksList';
 import { TaskColumnsWrapper } from './TasksColumn.styled';
 
 export default function TasksColumn({
+  tasksForDeleteColumn,
   column,
   tasksForColumn,
   sortedColumnList,
@@ -14,6 +15,7 @@ export default function TasksColumn({
       <ColumnHeadBar
         column={column}
         tasksForColumn={tasksForColumn}
+        tasksForDeleteColumn={tasksForDeleteColumn}
       />
       <ColumnTasksList
         tasksForColumn={tasksForColumn}
