@@ -16,7 +16,7 @@ import {
   MoveTaskIconBase,
 } from './TaskToolbar.styled';
 
-const TaskToolbar = ({ task, columns, setIsContextMenuOpen }) => {
+const TaskToolbar = ({ task, columns }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const menuRef = useRef(null);
@@ -24,9 +24,6 @@ const TaskToolbar = ({ task, columns, setIsContextMenuOpen }) => {
   const currentTheme = useSelector(selectTheme);
 
   useEffect(() => {
-    if (!showMenu) {
-      return;
-    }
     const handleClickOutside = event => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setShowMenu(false);
@@ -35,7 +32,6 @@ const TaskToolbar = ({ task, columns, setIsContextMenuOpen }) => {
 
     const handleEscapeKey = event => {
       if (event.key === 'Escape') {
-        setIsContextMenuOpen(false);
         setShowMenu(false);
       }
     };
@@ -47,7 +43,7 @@ const TaskToolbar = ({ task, columns, setIsContextMenuOpen }) => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [setIsContextMenuOpen, showMenu]);
+  }, []);
 
   const handleMoveTask = (category, task) => {
     const newTask = { ...task, category: category };
@@ -56,7 +52,6 @@ const TaskToolbar = ({ task, columns, setIsContextMenuOpen }) => {
       .catch(e => {
         toast.error(`Unable to change category task`);
       });
-    setIsContextMenuOpen(prev => (prev = !prev));
     setShowMenu(!showMenu);
   };
 
@@ -73,7 +68,6 @@ const TaskToolbar = ({ task, columns, setIsContextMenuOpen }) => {
   };
 
   const handleToggleMenu = () => {
-    setIsContextMenuOpen(prev => (prev = !prev));
     setShowMenu(!showMenu);
   };
 

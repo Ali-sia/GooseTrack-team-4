@@ -30,9 +30,4 @@ export const StyledButton = styled.button`
   img {
     margin-right: ${p => p.theme.space[4] - 1}px;
   }
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-  &:hover {
-    transform: scale(0.97);
-  }
 `;

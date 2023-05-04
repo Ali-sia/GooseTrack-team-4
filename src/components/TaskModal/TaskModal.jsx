@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { toast } from 'react-hot-toast';
 import { editTask, addTask } from 'redux/tasks/tasks.operations';
 
-function TaskModal({ task, category, onClose, isModalOpen, readOnlyMode }) {
+function TaskModal({ task, category, onClose, isModalOpen }) {
   const dispatch = useDispatch();
   const activeDate = new Date(JSON.parse(useSelector(getActiveDate)));
 
@@ -44,7 +44,6 @@ function TaskModal({ task, category, onClose, isModalOpen, readOnlyMode }) {
         onSubmit={handleSubmit}
         onClose={handleClose}
         isModalOpen={isModalOpen}
-        readOnlyMode={readOnlyMode}
       />
     </Modal>
   );

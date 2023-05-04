@@ -24,14 +24,7 @@ import {
   Textarea,
 } from './TaskForm.styled';
 
-const TaskForm = ({
-  task,
-  category,
-  onSubmit,
-  onClose,
-  isModalOpen,
-  readOnlyMode = false,
-}) => {
+const TaskForm = ({ task, category, onSubmit, onClose, isModalOpen }) => {
   const initialFormData = useMemo(() => {
     return {
       title: task?.title || '',
@@ -121,7 +114,6 @@ const TaskForm = ({
           onChange={handleChange}
           placeholder="Enter text"
           maxLength={30}
-          disabled={readOnlyMode}
         />
         {error && <ErrorMessage>{error}</ErrorMessage>}
       </TitleContainer>
@@ -140,7 +132,6 @@ const TaskForm = ({
             onChange={handleChange}
             mask={[/[0-2]/, /\d/, ':', /[0-5]/, /\d/]}
             required
-            readOnly={readOnlyMode}
           />
         </InnerContainer>
         <InnerContainer>
@@ -156,7 +147,6 @@ const TaskForm = ({
             onChange={handleChange}
             mask={[/[0-2]/, /\d/, ':', /[0-5]/, /\d/]}
             required
-            readOnly={readOnlyMode}
           />
         </InnerContainer>
       </TimeContainer>
@@ -168,7 +158,6 @@ const TaskForm = ({
             value="low"
             checked={formData.priority === 'low'}
             onChange={handleChange}
-            disabled={readOnlyMode && formData.priority !== 'low'}
           />
           <RadioIconContainer>
             {formData.priority === 'low' ? (
@@ -185,7 +174,6 @@ const TaskForm = ({
             value="medium"
             checked={formData.priority === 'medium'}
             onChange={handleChange}
-            disabled={readOnlyMode && formData.priority !== 'medium'}
           />
           <RadioIconContainer>
             {formData.priority === 'medium' ? (
@@ -204,7 +192,6 @@ const TaskForm = ({
             value="high"
             checked={formData.priority === 'high'}
             onChange={handleChange}
-            disabled={readOnlyMode && formData.priority !== 'high'}
           />
           <RadioIconContainer>
             {formData.priority === 'high' ? (
@@ -231,15 +218,10 @@ const TaskForm = ({
           placeholder="Please enter task description"
           rows={4}
           maxLength={120}
-          disabled={readOnlyMode}
         />
       </DescriptionContainer>
       <ButtonContainer>
-        {readOnlyMode ? (
-          <Button type="button" onClick={handleClose}>
-            Close
-          </Button>
-        ) : task ? (
+        {task ? (
           <Button type="submit" primary>
             <svg
               width="16"

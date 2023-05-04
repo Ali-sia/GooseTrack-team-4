@@ -21,11 +21,6 @@ const Button = styled.button`
   cursor: pointer;
 
   border-width: 0;
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.3);
-  }
 `;
 
 const ContextMenu = styled.div`
